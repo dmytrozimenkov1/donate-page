@@ -43,7 +43,7 @@
 
 .paypal-button img {
     max-width: 100%;
-    max-height: 1.5rem; /* Add this line */
+    max-height: 1.6rem; /* Add this line */
 
     /*height: auto;*/
 }
@@ -137,3 +137,24 @@ header {
     width: 10px;
     height: 10px;
 }
+
+
+/* Container styles */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Make the container take up the full viewport height */
+}
+
+/* Main content styles */
+.row {
+    flex-grow: 0.5; /* Make the main content grow and fill the remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; /* Distribute space evenly between the items */
+}
+
+/* Header styles */
+/*header {*/
+/*    padding: 2rem 0 4rem 0; !* Increase bottom padding *!*/
+/*}*/
