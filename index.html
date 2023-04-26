@@ -54,47 +54,47 @@
     </div>
 
 </div>
+<div id="copied-notification" class="fixed-bottom bg-success text-white text-center py-2">
+    Скопійовано
+</div>
+
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var clipboard = new ClipboardJS('.copy-btn');
-
-        clipboard.on('success', function (e) {
-            console.log('Text copied to clipboard: ' + e.text);
-            e.clearSelection();
-        });
-
-        clipboard.on('error', function (e) {
-            console.error('Action:', e.action);
-            console.error('Trigger:', e.trigger);
-        });
-    });
 
     document.addEventListener('DOMContentLoaded', function () {
-        var clipboard = new ClipboardJS('.copy-btn');
-        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-            return new bootstrap.Tooltip(tooltipTriggerEl);
-        });
-
-        clipboard.on('success', function (e) {
-            console.log('Text copied to clipboard: ' + e.text);
-            e.clearSelection();
-            var tooltip = bootstrap.Tooltip.getInstance(e.trigger);
-            tooltip.show();
-            setTimeout(function () {
-                tooltip.hide();
-            }, 1500);
-        });
-
-        clipboard.on('error', function (e) {
-            console.error('Action:', e.action);
-            console.error('Trigger:', e.trigger);
-        });
+    var clipboard = new ClipboardJS('.copy-btn');
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
     });
+
+    clipboard.on('success', function (e) {
+        console.log('Text copied to clipboard: ' + e.text);
+        e.clearSelection();
+        var tooltip = bootstrap.Tooltip.getInstance(e.trigger);
+        tooltip.show();
+
+        // Show the green line
+        var copiedNotification = document.getElementById('copied-notification');
+        copiedNotification.style.opacity = '1';
+
+        setTimeout(function () {
+            tooltip.hide();
+
+            // Hide the green line with a smooth transition
+            copiedNotification.style.opacity = '0';
+        }, 1500);
+    });
+
+    clipboard.on('error', function (e) {
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+    });
+});
+
 
 </script>
 
