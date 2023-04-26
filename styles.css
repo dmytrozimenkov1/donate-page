@@ -148,7 +148,7 @@ header {
 
 /* Main content styles */
 .row {
-    flex-grow: 0.5; /* Make the main content grow and fill the remaining space */
+    flex-grow: 0.3; /* Make the main content grow and fill the remaining space */
     display: flex;
     flex-direction: column;
     justify-content: space-around; /* Distribute space evenly between the items */
