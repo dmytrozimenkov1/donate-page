@@ -1,3 +1,29 @@
+/* Monobank button styles */
+.monobank-button {
+    background-color: rgb(45, 45, 56);
+}
+
+.monobank-button:hover {
+    background-color: rgb(35, 35, 46);
+}
+
+.monobank-copy {
+    background-color: rgb(45, 45, 56);
+}
+
+/* Privat24 button styles */
+.privat24-button {
+    background-color: rgb(113, 174, 68);
+}
+
+.privat24-button:hover {
+    background-color: rgb(103, 164, 58);
+}
+
+.privat24-copy {
+    background-color: rgb(113, 174, 68);
+}
+
 .paypal-button {
     background-color: rgb(245, 198, 87);
     padding: .375rem .75rem;
@@ -12,14 +38,39 @@
     border: 1px solid transparent;
     border-radius: .25rem;
     transition: all .15s ease-in-out;
+    /*height: 40px;*/
 }
 
 .paypal-button img {
     max-width: 100%;
-    height: auto;
+    max-height: 1.5rem; /* Add this line */
+
+    /*height: auto;*/
 }
 
 .paypal-button:hover {
     background-color: rgb(225, 178, 67);
     text-decoration: none;
+}
+.paypal-copy {
+    background-color: rgb(245, 198, 87);
+}
+
+
+.clipboard-button {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+
+.btn btn-secondary copy-btn {
+    width: 20px;
+    height: 20px;
+}
+
+.donate-button {
+    width: 160px;
 }
