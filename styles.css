@@ -83,3 +83,57 @@
 body {
     background-color: #f5f5f5;
 }
+/*.btn {*/
+/*    size: 1.3rem;*/
+/*    padding: .5rem 1rem;*/
+/*}*/
+
+
+
+
+
+
+
+/* General styles */
+body {
+    font-size: 18px; /* Increase font size */
+    background-color: #f5f5f5;
+}
+
+/* Header styles */
+header {
+    padding: 2rem 0; /* Increase padding */
+}
+
+/* Progress bar styles */
+.progress {
+    height: 30px; /* Increase height */
+}
+
+/* Button styles */
+.donate-button {
+    font-size: 1.1rem; /* Increase font size */
+    padding: .7rem 1.2rem; /* Increase padding */
+    width: 200px; /* Increase width */
+}
+
+/* PayPal button image size */
+.paypal-button img {
+    max-height: 1.6rem; /* Increase height */
+}
+
+/* Clipboard button styles */
+.clipboard-button {
+    width: 37px; /* Increase width */
+    height: 37px; /* Increase height */
+}
+
+/* Tooltip styles */
+.tooltip-inner {
+    font-size: 1rem; /* Increase font size */
+    padding: .7rem 1rem; /* Increase padding */
+}
+.tooltip-arrow {
+    width: 10px;
+    height: 10px;
+}
